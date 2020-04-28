@@ -8,7 +8,7 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
     }
   });
 });
-
+//
 (function (global) {
 
 var dc = {};
@@ -82,8 +82,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 // On first load, show home view
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
-  allCategoriesUrl,buildAndShowHomeHTML
-  ,                                            // ***** <---- TODO: STEP 1: Substitute [...] ******
+  allCategoriesUrl,buildAndShowHomeHTM ,                                            // ***** <---- TODO: STEP 1: Substitute [...] ******
   true); // Explicitly setting the flag to get JSON from server processed into an object literal
 });
 // *** finish **
@@ -120,7 +119,7 @@ function buildAndShowHomeHTML (categories) {
 
 
 
-      chosenCategoryShortName = "'" + chosenCategoryShortName + "'";
+      chosenCategoryShortName = " ' " + chosenCategoryShortName + " ' ";
       var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml, "randomCategoryShortName", chosenCategoryShortName);
 
 
